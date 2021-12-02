@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/chenxifun/auto-generate-code/auto"
 	"github.com/chenxifun/auto-generate-code/common"
+	"github.com/chenxifun/auto-generate-code/version"
 )
 
 var inFilePath string
@@ -23,6 +24,7 @@ func init() {
 
 func main() {
 	flag.Parse()
+	fmt.Println("version:", version.Version)
 
 	if inFilePath == "" || outFilePath == "" {
 		fmt.Println("can not be emtry")
